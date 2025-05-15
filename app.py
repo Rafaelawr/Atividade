@@ -1,4 +1,4 @@
-from flask import Flask, jsonify, reques
+from flask import Flask, jsonify, requests
 from config import app                
 
 if __name__ == '__name__':
