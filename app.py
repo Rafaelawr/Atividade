@@ -2,4 +2,4 @@ from flask import Flask, jsonify, reques
 from config import app                
 
 if __name__ == '__name__':
-    app.run(hosr= 'localhost', port=5001)
+    app.run(host=app.config["HOST"], port = app.config['PORT'],debug=app.config['DEBUG'] )
