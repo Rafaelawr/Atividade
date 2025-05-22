@@ -1,5 +1,8 @@
-from flask import Flask, jsonify, requests
-from config import app                
+from config import create_app
+from controllers.atividade_controller import atividade_bp
 
-if __name__ == '__name__':
-    app.run(host=app.config["HOST"], port = app.config['PORT'],debug=app.config['DEBUG'] )
+app = create_app()
+app.register_blueprint(atividade_bp, url_prefix='/atividade')
+
+if __name__ == '_main_':
+  app.run(host='localhost', port=5002) 
