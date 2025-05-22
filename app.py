@@ -1,4 +1,5 @@
-from config import create_app
+from flask import Flask
+from database import db
 from controllers.atividade_controller import atividade_bp
 
 app = create_app()
